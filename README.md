@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Readme
 ========================================================
 
@@ -79,3 +80,9 @@ This dataset is distributed AS-IS and no responsibility implied or explicit can 
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
 
+=======
+GettingCleaningData
+===================
+
+This repository as the code for the assignment from Getting and Cleaning Data - Coursera course on Data Scientist
+>>>>>>> 54ecb9246b71073306f3f066c0af0d77c3680d27
