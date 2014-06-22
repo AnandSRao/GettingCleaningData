@@ -35,24 +35,9 @@ features <- read.table("features.txt")
 setwd("~/My Courses/GettingAndCleaningData/Project/UCI HAR Dataset")
 activities <- read.table("activity_labels.txt")
 
-f1 <- function(x) activities$V2[x]
-
-anames <- lapply(combinedX2$activitiyid,function(x) activities$V2[x])
-
-
-## Extract all variables that contain "mean" and "std" from the list of variable names in features
-#selectvars1 <- features[grepl("mean()|std()",features$V2),]
-
-## Extract all variables that contain "meanFreq" from the list of variables
-#selectvars2 <- selectvars1[!grepl("meanFreq()",selectvars1$V2),]
-
-
-
-
 ## Apply the variable names from features to the "test" and "training" observations in X
 names(Xtest) <- features$V2
 names(Xtrain) <- features$V2
-
 
 ## Test contains test data and Train contains training data
 ## Xtest and Xtrain contain observations for all of the 30 subjects
@@ -82,10 +67,14 @@ names(combinedX2) <- gsub("\\(\\)y","",colnames(combinedX2))
 names(combinedX2) <- gsub("\\(\\)z","",colnames(combinedX2))
 names(combinedX2) <- gsub("\\(\\)","",colnames(combinedX2))
 
+## Create a data file (in txt format) that contains the combined data set
+write.table(combinedX2, file="tidycombineddata.txt",sep=",")
+
+
+
 ## Create a second, independent tidy data set with the average 
 ## of each variable for each activity and each subject.
-
-
 moltenX <- melt(combinedX2, measure.vars=c("subjectid","activityid"))
 averageX <- dcast(combinedX2, subjectid ~ activityid, mean)
+
 
