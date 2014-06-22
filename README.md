@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-Readme
+# Readme File
 ========================================================
 
 ## Purpose of Project
@@ -18,7 +17,7 @@ The purpose of this project is to demonstrate our ability to collect, work with,
 1. README - This is the current README file explaining the purpose of the repository and what it does
 2. data_analysis.R - This is the code file that contains the code for merging the files, cleaning the data and making them 'tidy and wide' for analysis
 3. CodeBook.md - The file that describes the variables, the data, and any transformations or work that was performed to clean up the data
-4. tidydata.txt - The file that contains the combined observations of test and training data for selected variables and their averages in a 'tidy and wide' format that allows further analysis
+4. tidycombineddata.txt - The file that contains the combined observations of test and training data for selected variables in a 'tidy and wide' format that allows further analysis
 
 
 ### DESCRITPTION OF SAMSUMG DATA THAT IS ANALYZED BY THE PROGRAMS
